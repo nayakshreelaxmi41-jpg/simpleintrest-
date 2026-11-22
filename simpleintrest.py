@@ -1,16 +1,12 @@
 import sys
 
-def simple_interest(principal, intrest, time):
-    return (principal * intrest * time) / 100
+p = int(sys.argv[1])
+r = float(sys.argv[2])
+t = float(sys.argv[3])
 
-if __name__ == "__main__":
-    if len(sys.argv) == 4:
-        p = int(sys.argv[1])
-        i = float(sys.argv[2])
-        t = int(sys.argv[3])
-    else:
-        p = int(input("Enter Principal Amount: "))
-        i = float(input("Enter Rate of Interest: "))
-        t = int(input("Enter Time: "))
+si = (p * r * t) / 100
 
-    print("Simple interest is:", simple_interest(p, i, t))
+print("Principal Amount:", p)
+print("Rate:", r)
+print("Time:", t)
+print("Simple Interest:", si)
